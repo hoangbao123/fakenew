@@ -10,6 +10,11 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url 'http://dl.bintray.com/spark-packages/maven'
+//        id 'SparkPackagesRepo'
+    }
+
 }
 task fatJar(type: Jar) {
     manifest {
@@ -36,6 +41,6 @@ dependencies {
     // https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10
     compile group: 'org.apache.spark', name: 'spark-streaming-kafka-0-10_2.12', version: '2.4.5'
     compile 'org.scala-lang:scala-library:2.12'
-
+    compile group: 'neo4j-contrib', name: 'neo4j-spark-connector', version: '2.4.1-M1'
     compileOnly 'org.projectlombok:lombok:1.18.12'
 }

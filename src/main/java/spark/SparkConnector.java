@@ -8,6 +8,7 @@ import org.apache.spark.streaming.api.java.*;
 import org.apache.spark.streaming.kafka010.ConsumerStrategies;
 import org.apache.spark.streaming.kafka010.KafkaUtils;
 import org.apache.spark.streaming.kafka010.LocationStrategies;
+import org.neo4j.spark.Neo4j;
 import scala.Tuple2;
 
 import java.util.Arrays;
